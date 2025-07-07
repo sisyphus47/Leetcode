@@ -3,10 +3,10 @@ class Solution:
         nums.sort()
         result=[]
         for i in range(len(nums)-2):
-            l=i+1
-            r=len(nums)-1
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
+            l=i+1
+            r=len(nums)-1            
             while(l<r):
                 if nums[i]+nums[l]+nums[r]==0:
                     result+=[[nums[i],nums[l],nums[r]]]
